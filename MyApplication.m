@@ -28,10 +28,10 @@
         {
             if (touchEvent.phase== UITouchPhaseEnded) {
                 
-                            PopupViewController *alertView = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PopupViewController"];
+                PopupViewController *alertView = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PopupViewController"];
                 if([target isKindOfClass:[ABC class]] || [target isKindOfClass:[XYZ class]])
                 {
-                    if([userNOTSignedIn]){
+                        if([userNOTSignedIn]){
                             alertView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
                             [target presentViewController:alertView animated:YES completion:NULL];
                     }
@@ -41,38 +41,5 @@
         }
     }
 }
-
-            
-            
-//            [[[UIAlertView alloc]initWithTitle:@"Alert" message:@"mmm" delegate:[AppDelegate sharedDalagate] cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil] show];
-//
-//            return;
-//            UIViewController *viewController = (UIViewController *)target;
-//            
-//            PopupViewController *signinViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PopupViewController"];
-//            signinViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-//            [viewController presentViewController:signinViewController animated:YES completion:NULL];
-//            return;
-//            
-//            if(![viewController isKindOfClass:[SignInViewController class]]){
-//                PopupViewController *signinViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"PopupViewController"];
-//                signinViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-//                [viewController presentViewController:signinViewController animated:YES completion:NULL];
-//                return;
-//                for (NSString *action in actions) {
-//                    
-//                    [newButton addTarget:target action:NSSelectorFromString(action) forControlEvents:UIControlEventTouchUpInside];
-//                }
-////            }
-//        }
-//        //        NSArray *actions = [button actionsForTarget:nil
-//        //                                    forControlEvent:UIControlEventTouchUpInside];
-//        //        id action=[button actionForLayer:[itsSuperView layer] forKey:@"touchUpInside"];
-//    }
-////    [super sendEvent:event];
-//    
-//    
-//}
-
 
 @end
